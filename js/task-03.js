@@ -17,7 +17,7 @@ const galleryEl = document.querySelector('.gallery')
 const items = images.map(img => {
 
   const imageEl = document.createElement('img');
-  imageEl.scr = 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+  imageEl.scr = img.scr;
   imageEl.alt = img.alt;
   imageEl.width = '260'
   imageEl.height = '180'
