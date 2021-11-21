@@ -1,23 +1,4 @@
-const formToLogin = document.querySelector('.login-form');
-const userInformation = {}
+const inputRunner = document.querySelector('#font-size-control');
+const textOutput = document.querySelector('#text');
 
-
-const onSubmitLoginBtn = event => {
-    
-    event.preventDefault();
-  
-    const {
-    elements:{ password, email }
-  } = event.currentTarget;
-
-  if (email.value === "" || password.value === "") {
-    return alert('Внимание! Все поля должны быть заполнены!')
-  }
-   
-    userInformation.password = password.value;
-    userInformation.email = email.value
-     console.log(userInformation)
-    formToLogin.reset()
-    
-}
-
+inputRunner.addEventListener('input', () => textOutput.style.fontSize = `${inputRunner.value}px`);
