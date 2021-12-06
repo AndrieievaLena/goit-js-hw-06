@@ -13,17 +13,9 @@ const images = [
   },
 ];
 
-const galleryEl = document.querySelector('.gallery')
-const items = images.map(img => {
+const listEl = document.querySelector('ul');
+const markup = images
+  .map(image => `<li><img src=${image.url} alt=${image.alt} width = 320></li>`)
+    .join('');
 
-  const imageEl = document.createElement('img');
-  imageEl.scr = img.scr;
-  imageEl.alt = img.alt;
-  imageEl.width = '260'
-  imageEl.height = '180'
-  return imageEl 
-
-})
-
-galleryEl.append(...items);
-console.log (galleryEl);
+listEl.insertAdjacentHTML('beforeend', markup);
